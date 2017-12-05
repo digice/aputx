@@ -11,6 +11,8 @@
 
 namespace aputx;
 
+require_once(dirname(__DIR__).DIRECTORY_SEPARATOR.'etc'.DIRECTORY_SEPARATOR.'config.php');
+
 function load_lib() {
   $path = __DIR__.DIRECTORY_SEPARATOR.'src';
   $di = new \DirectoryIterator($path);
