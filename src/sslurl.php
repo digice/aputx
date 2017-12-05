@@ -7,7 +7,7 @@
  * @license   MIT
  */
 
-namespace aputx;
+namespace digices\aputx;
 
 class SslUrl {
 

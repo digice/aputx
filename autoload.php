@@ -9,9 +9,9 @@
 
 /** Autoload **/
 
-namespace aputx;
+namespace digices\aputx;
 
-require_once(dirname(__DIR__).DIRECTORY_SEPARATOR.'etc'.DIRECTORY_SEPARATOR.'config.php');
+require_once(__DIR__.DIRECTORY_SEPARATOR.'etc'.DIRECTORY_SEPARATOR.'config.php');
 
 function load_lib() {
   $path = __DIR__.DIRECTORY_SEPARATOR.'src';
@@ -24,4 +24,4 @@ function load_lib() {
   }
 }
 
-\aputx\load_lib();
+\digices\aputx\load_lib();

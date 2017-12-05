@@ -7,7 +7,7 @@
  * @license   MIT
  */
 
-namespace aputx;
+namespace digices\aputx;
 
 /*** Extracts text in a table view into multi-dimensional array ***/
 
