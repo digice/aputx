@@ -1,0 +1,13 @@
+{
+    "name": "digices/aputx",
+    "description": "Apache Utilities for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roderic Linguri",
+            "email": "linguri@digices.com"
+        }
+    ],
+    "require": {}
+}
