@@ -35,7 +35,11 @@ class HtmTbl {
         // end of extraction is at '</td'
         $end = strpos($col,'</td');
         $len = $end - $stp;
-        $txt = strip_tags(substr($col,$stp,$len));
+        if (TBL_STRIP_TAGS == 1) {
+          $txt = strip_tags(substr($col,$stp,$len));
+        } else {
+          $txt = substr($col,$stp,$len);
+        }
         array_push($row_to_append,$txt);
       } // ./foreach cell
       array_push($this->rows,$row_to_append);
