@@ -1,13 +1,22 @@
 <?php
 
-/*** Extracts text in a table view into multi-dimensional array ***/
+/**
+ * @package   ApUtx
+ * @author    Roderic Linguri
+ * @copyright 2017 Digices LLC
+ * @license   MIT
+ */
 
 namespace aputx;
 
+/*** Extracts text in a table view into multi-dimensional array ***/
+
 class HtmTbl {
 
+  /** @property mixed **/
   protected $rows;
 
+  /** @method constructor **/
   public function __construct($path)
   {
     $this->rows = array();
@@ -26,22 +35,27 @@ class HtmTbl {
         // end of extraction is at '</td'
         $end = strpos($col,'</td');
         $len = $end - $stp;
-        // $txt = strip_tags(substr($col,$stp,$len));
-        $txt = substr($col,$stp,$len);
+        $txt = strip_tags(substr($col,$stp,$len));
         array_push($row_to_append,$txt);
       } // ./foreach cell
       array_push($this->rows,$row_to_append);
     } // ./foreach row
-  }
+  } // ./constructor
 
+  /** @method Rows
+    * @return mixed
+    **/
   public function rows()
   {
     return $this->rows;
-  }
+  } // ./rows
 
+  /** @method JSON
+    * @return string
+    **/
   public function json()
   {
     return json_encode($this->rows);
-  }
+  } // ./json
 
 }
